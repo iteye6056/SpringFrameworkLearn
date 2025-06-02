@@ -18,7 +18,7 @@ public class TestAnnotation {
         try {
             Method method = TestAnnotation.class.getDeclaredMethod("test");
             MyAnnotation annotation = method.getAnnotation(MyAnnotation.class);
-            System.out.println(annotation.defaultValue());
+            System.out.println("annotation default value is "+annotation.defaultValue());
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
