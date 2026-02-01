@@ -14,8 +14,9 @@ public class LamdaTry {
         myList.add("try3");
 //        myList.forEach((s)-> {System.out.println(s+"test");});
         myList.forEach(s->add(s)); //常见的Lamda表达式
-//        myList.forEach(String::toUpperCase);
-        myList.forEach(LamdaTry::output); //终极简化版Lamda 表达式
+        myList.forEach(s-> System.out.println(s));
+       // myList.forEach(LamdaTry::output); //终极简化版Lamda 表达式
+        testSystemFormat();
 
     }
     public static void add(String s){
@@ -24,5 +25,12 @@ public class LamdaTry {
 
     public static void output(String s){
         System.out.println(s);
+    }
+
+
+    public static void testSystemFormat(){
+
+        System.out.printf("Test1- %s, and Test2- %s", "123","456");
+
     }
 }
